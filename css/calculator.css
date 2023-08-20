@@ -1,0 +1,26 @@
+#calculator-wrapper{
+    border: solid black 1px;
+    padding:20px;
+    width: 480px;
+}
+
+#calculator-display-wrapper{
+    border: solid black 1px;
+    margin: 10px 0px 35px 0px;
+    height: 120px;
+}
+
+.calculator-btn-wrapper{
+    height: 100px;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.calculator-btn{
+    height: 100px;
+    width: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
