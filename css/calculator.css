@@ -23,4 +23,55 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: xx-large;
+}
+
+#calculator-current-display-wrapper{
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+#calculator-current-calculation-wrapper{
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+#calculator-result-span{
+    font-size: xxx-large;
+}
+
+#calculator-calculation-span{
+    font-size: x-large;
+}
+
+#calculator-header-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+#calculator-footer-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+#github-logo-icon {
+    height: 20px;
+    width: 20px;
+}
+
+#calculator-wrapper-main{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
 }

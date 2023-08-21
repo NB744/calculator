@@ -9,40 +9,45 @@
     </head>
 
     <body>
-        <div id ="calculator-wrapper">
-            <div id = "calculator-display-wrapper">
-                <div id = "calculator-history-display-wrapper"></div>
-                <div id = "calculator-current-display-wrapper"></div>
-            </div>
-            <div class = "calculator-btn-wrapper">
-                <button class = "calculator-btn" data-btn-type="other">AC</button>
-                <button class = "calculator-btn" data-btn-type="other">DEL</button> <!-- &#8730; is the square root icon -->
-                <button class = "calculator-btn" data-btn-type="opt">%</button>
-                <button class = "calculator-btn" data-btn-type="opt">&#247;</button> <!-- &#247; is the division icon-->
-            </div>
-            <div class = "calculator-btn-wrapper">
-                <button class = "calculator-btn" data-btn-type="opr">7</button>
-                <button class = "calculator-btn" data-btn-type="opr">8</button>
-                <button class = "calculator-btn" data-btn-type="opr">9</button>
-                <button class = "calculator-btn" data-btn-type="opr">X</button> <!-- &#247; is division icon-->
-            </div>
-            <div class = "calculator-btn-wrapper">
-                <button class = "calculator-btn" data-btn-type="opr">4</button>
-                <button class = "calculator-btn" data-btn-type="opr">5</button>
-                <button class = "calculator-btn" data-btn-type="opr">6</button>
-                <button class = "calculator-btn" data-btn-type="opr">-</button>
-            </div>
-            <div class = "calculator-btn-wrapper">
-                <button class = "calculator-btn" data-btn-type="opr">1</button>
-                <button class = "calculator-btn" data-btn-type="opr">2</button>
-                <button class = "calculator-btn" data-btn-type="opr">3</button>
-                <button class = "calculator-btn" data-btn-type="opt">+</button>
-            </div>
-            <div class = "calculator-btn-wrapper">
-                <button class = "calculator-btn" data-btn-type="opr">0</button>
-                <button class = "calculator-btn" data-btn-type="opr">.</button>
-                <button class = "calculator-btn" data-btn-type="opt">+/-</button>
-                <button class = "calculator-btn" data-btn-type="other">=</button>
+        <div id = "calculator-header-wrapper">
+            <h1 id = 'calculator-header'>Yet Another Calculator</h1>
+        </div>
+        <div id ="calculator-wrapper-main">
+            <div id = "calculator-wrapper">
+                <div id = "calculator-display-wrapper">
+                    <div id = "calculator-current-calculation-wrapper"><span id="calculator-calculation-span"></span></div>
+                    <div id = "calculator-current-display-wrapper"><span id="calculator-result-span"></span></div>
+                </div>
+                <div class = "calculator-btn-wrapper">
+                    <button class = "calculator-btn" data-btn-type="other">AC</button>
+                    <button class = "calculator-btn" data-btn-type="other">DEL</button>
+                    <button class = "calculator-btn" data-btn-type="opt">^</button>
+                    <button class = "calculator-btn" data-btn-type="opt">&#247;</button> <!-- &#247; is the division icon-->
+                </div>
+                <div class = "calculator-btn-wrapper">
+                    <button class = "calculator-btn" data-btn-type="opr">7</button>
+                    <button class = "calculator-btn" data-btn-type="opr">8</button>
+                    <button class = "calculator-btn" data-btn-type="opr">9</button>
+                    <button class = "calculator-btn" data-btn-type="opt">X</button>
+                </div>
+                <div class = "calculator-btn-wrapper">
+                    <button class = "calculator-btn" data-btn-type="opr">4</button>
+                    <button class = "calculator-btn" data-btn-type="opr">5</button>
+                    <button class = "calculator-btn" data-btn-type="opr">6</button>
+                    <button class = "calculator-btn" data-btn-type="opt">-</button>
+                </div>
+                <div class = "calculator-btn-wrapper">
+                    <button class = "calculator-btn" data-btn-type="opr">1</button>
+                    <button class = "calculator-btn" data-btn-type="opr">2</button>
+                    <button class = "calculator-btn" data-btn-type="opr">3</button>
+                    <button class = "calculator-btn" data-btn-type="opt">+</button>
+                </div>
+                <div class = "calculator-btn-wrapper">
+                    <button class = "calculator-btn" data-btn-type="opr">0</button>
+                    <button class = "calculator-btn" data-btn-type="opr">.</button>
+                    <button class = "calculator-btn" data-btn-type="other">+/-</button>
+                    <button class = "calculator-btn" data-btn-type="other">=</button>
+                </div>
             </div>
         </div>
     </body>
@@ -50,6 +55,8 @@
     <footer>
         <!-- Image Attributions 
             <a href="https://www.flaticon.com/free-icons/calculator" title="calculator icons">Calculator icons created by Freepik - Flaticon</a>
+            <a href="https://www.flaticon.com/free-icons/github" title="github icons">Github icons created by Pixel perfect - Flaticon</a>
         -->
+        <div id = 'calculator-footer-wrapper'><span>Copyright &copy; NB744 <a href="https://github.com/NB744"><img src="img/github.png" alt = "Github Logo" id ='github-logo-icon'></a></span></div>
     </footer>
 </html>
