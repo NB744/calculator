@@ -1,13 +1,32 @@
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    background-color: #dff3ff;
+}
+
 #calculator-wrapper{
-    border: solid black 1px;
-    padding:20px;
+    border: solid black 5px;
+    padding:25px;
     width: 480px;
+    border-radius: 1rem;
+    background-color: #b3b3b3;
 }
 
 #calculator-display-wrapper{
-    border: solid black 1px;
+    border: solid black 3px;
     margin: 10px 0px 35px 0px;
     height: 120px;
+    background-color: #fff;
+    border-radius: 0.4rem;
 }
 
 .calculator-btn-wrapper{
@@ -24,6 +43,8 @@
     align-items: center;
     justify-content: center;
     font-size: xx-large;
+    border-radius: 1rem;
+    border: solid black 3px;
 }
 
 #calculator-current-display-wrapper{
@@ -50,12 +71,8 @@
     font-size: x-large;
 }
 
-#calculator-header-wrapper{
+#calculator-footer-span{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 20px;
 }
 
 #calculator-footer-wrapper{
@@ -63,15 +80,32 @@
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    font-size: x-large;
 }
 
 #github-logo-icon {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
+    transition: all 1s ease-in-out;
+}
+
+#github-logo-icon:hover{
+    transform: scale(1.5);
 }
 
 #calculator-wrapper-main{
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
+    margin-top: 100px;
 }
+
+
+#calculator-ac-btn{
+    background-color: #77e5ff;
+}
+
+#calculator-del-btn{
+    background-color: #e75e5e;
+}
+

@@ -1,5 +1,4 @@
 window.onload = function(){
-    console.log("Welcome to Nischal B's Calculator!");
 
     // First, when the DOM is loaded, we create a calculator object.
     let calculator = {
@@ -7,18 +6,14 @@ window.onload = function(){
     };
     let errorDisplayed = false;
     displayResult(0);
-    console.log(calculator);
 
     // Event listener for any button press.
     document.querySelectorAll(".calculator-btn").forEach(element => {
         element.addEventListener("click", () =>{
-            console.log(element);
             errorDisplayed = false;
             // Get the value of the button.
             let clickedBtnVal = element.textContent;
             let clickedBtnType = element.getAttribute("data-btn-type");
-            console.log(clickedBtnVal);
-            console.log(clickedBtnType);
             // Now, let's add this value to our calculator object.
             processBtnClick(clickedBtnVal, clickedBtnType);
         });
@@ -43,14 +38,12 @@ window.onload = function(){
          *              i. Concatenate the operand to the "firstOperand" property and update the property.
         */
        
-        console.log(calculator);
         if(btnType === "opt"){
             // First, check to see if both operands and the operator already exists in the calculator object. 
             // If so, we need to perform that operation and store the computed value in the "firstOperand" property.
             if(("firstOperand" in calculator) && ("secondOperand" in calculator) && ("currentOperator" in calculator)){
                 // Let's perform the calculation.
                 let operationVal = performOperation();
-                console.log(operationVal);
                 //Now, store this value in the "firstOperand" property.
                 calculator.firstOperand = operationVal;
                 //Now, delete the "secondOperand" property.
@@ -124,6 +117,8 @@ window.onload = function(){
 
                     // Now, update the result display since we deleted the last digit.
                     displayResult(calculator.secondOperand);
+                    //Also, update calculation display.
+                    displayCalculation();
                     
                 }else{
                     if("currentOperator" in calculator){
@@ -138,7 +133,7 @@ window.onload = function(){
                     }else{
                         // This means we only have the "firstOperand" in our calculator object. 
                         // We simply delete the last digit from it, and update the result display.
-                        calculator.firstOperand = calculator.firstOperand.substr(0, calculator.firstOperand.length - 1);
+                        calculator.firstOperand = (calculator.firstOperand).substr(0, (calculator.firstOperand).length - 1);
                         
                         if(calculator.firstOperand === "" || calculator.firstOperand === "-"){
                             resetCalculator();
@@ -196,14 +191,15 @@ window.onload = function(){
                     //Update Calculate String.
                     displayCalculation("equals");
                     // Perform calculation.
-                    performOperation();
+                    let equalsValue = performOperation();
+                    //Now, set this total as the new firstOperand. Also, delete the "secondOperand" and the "currentOperator"
+                    calculator.firstOperand = `${equalsValue}`;
+                    delete calculator.currentOperator;
+                    delete calculator.secondOperand;
                 }
             }
         }
-
-        console.log(calculator);
-        
-
+        //console.log(calculator);
     }
 
     /**
